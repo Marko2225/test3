@@ -4,10 +4,10 @@ const LAUNCHES = '/launches'
 
 const UPCOMING_LAUNCHES = `${LAUNCHES}/upcoming`
 
-export const getUpcomingLaunches = () => axios.get(`${BASE_URL}${UPCOMING_LAUNCHES}`)
-//moze i ovako
-// export const getUpcomingLaunches = () => {
-//     return axios.get(`https://api.spacexdata.com/v4/launches`)}
+//export const getUpcomingLaunches = () => axios.get(`${BASE_URL}${UPCOMING_LAUNCHES}`)
+//moze i ovako https://api.spacexdata.com/v4/launches/next
+ export const getUpcomingLaunches = () => {
+return axios.get(`https://api.spacexdata.com/v4/launches/next`)}
 
 export const getCompanyInfo = () => {
     return axios.get('https://api.spacexdata.com/v3/info')

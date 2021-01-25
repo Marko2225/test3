@@ -39,8 +39,8 @@ let launches = []
 
         //treba forEach
         res.data.forEach(element => {
-            console.log(element.spaceTrack)
-            console.log(element.version)
+          //  console.log(element.spaceTrack)
+           // console.log(element.version)
              const version = document.createElement('p')
         version.textContent= element.version
          const TLO = document.createElement('p')
@@ -80,7 +80,8 @@ let launches = []
     btnUpcomingLaunches.addEventListener('click',() => {
         divLaunches.innerHTML = ''
         getUpcomingLaunches().then(res => {
-            launches = res.data
+            console.log([res.data])
+            launches = [res.data]
             divLaunches.append(...Launches(launches))
         })
     })
