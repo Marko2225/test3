@@ -25,10 +25,10 @@ let launches = []
         headquartersAdd.textContent=res.data.headquarters.address
 
         const hState= document.createElement('p')
-        headquartersAdd.textContent=res.data.headquarters.state
+        hState.textContent=res.data.headquarters.state
 
         const hCity= document.createElement('p')
-        headquartersAdd.textContent=res.data.headquarters.city
+        hCity.textContent=res.data.headquarters.city
 
 
     header.append(naziv,godinaOsnivanja,headquartersAdd,hState,hCity)
