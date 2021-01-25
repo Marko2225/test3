@@ -1,0 +1,71 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ 
+}
+header p {
+    color: blue;
+
+}
+.launch-list{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 29px;
+    column-gap: 5px;
+}
+.launch{
+    width: 19%;
+    height: 300px;
+    text-align: center;
+    padding: 8px;
+    transition: transform .2s;
+    background-color: rgba(255,255,255,0.5);
+}
+.launch:hover{
+    transform: scale(1.05);
+}
+.inner-div-0{
+    height: 190px;
+    width: 100%;
+}
+.inner-div-0 img{
+    height: 100%;
+    /* width: 100%; */
+}
+.inner-div-1{
+    height: 45px;
+    width: 100%;
+    border-bottom: 0.5px solid #999;
+}
+.inner-div-2{
+    height: 45px;
+    width: 100%;
+}
+span{
+    display: inline-block;
+    margin-top: 12.3px;
+    margin-right: 5px;
+}
+#rocket {
+    z-index: 1000;
+    position: absolute;
+    visibility: hidden;
+    transform: rotate(57deg);
+    left:35%;
+    animation: fly 6.2s 0.1s ease-in;
+}
+@keyframes fly {
+0% {
+    visibility: visible;
+    transform: rotate(0deg);
+    bottom: -450px; 
+    left: -450px; 
+}
+100% {
+    transform: rotate(85deg);
+    left:100%;
+    bottom: 100%;
+}
+}
