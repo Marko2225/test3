@@ -53,7 +53,7 @@ getSatelite().then(res => {
 
     })
 
-
+   //mapiranje
     let options = res.data.map(element => {
         console.log(element.version)
         return element.version
@@ -76,18 +76,18 @@ getSatelite().then(res => {
             opt.value = option
             opt.textContent = option ? option : 'Other'
             select.appendChild(opt)
-            header.prepend(select)
         })
+        header.prepend(select)
+
         select.addEventListener('change', (event) => {
             satelite.innerHTML = ''
             let tmp = res.data
             tmp = res.data.filter(element => {
-                console.log(event.target.value);
-                console.log(element.version === event.target.value);
+               
                 return element.version == event.target.value
 
             })
-            console.log(res.data)
+            console.log(tmp)
             tmp.forEach(element => {
 
                 LaunchVersion(element)
