@@ -1,7 +1,7 @@
-## important
-
-use old version of node.js 14.21.0 
-
+## important use old version of node.js 
+```
+nvm use 14.21.0 
+```
 ## Project setup
 ```
 npm install
